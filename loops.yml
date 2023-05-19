@@ -1,0 +1,9 @@
+---
+- name: Loops
+  hosts: all
+  become: yes
+
+
+  tasks:
+  - name: genetate local files
+    template: src=/root/file.j2 dest=/root

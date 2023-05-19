@@ -1,0 +1,11 @@
+---
+# tasks file for deploy
+- block:
+
+  - name: exet bash
+    command: sh /root/block.sh
+    register: out
+  - debug:
+      var=out.stdout_lines
+  when: ansible_os_family=="RedHat"
+
